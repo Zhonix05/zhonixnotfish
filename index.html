@@ -12,7 +12,6 @@
     src: local('Common Pixel'), url('https://fonts.cdnfonts.com/s/7553/COMMP___.woff') format('woff');
     }
     h1 {
-      font-family: 'Common Pixel', sans-serif;
       font-size: 50px;
       color: cornsilk;
       text-align: center;
@@ -25,6 +24,7 @@
       background-image:url('gif.gif'); background-repeat:repeat;
       background-attachment: scroll; 
       background-size: cover;
+      font-family: 'Common Pixel', sans-serif;
     }
     .bg {
       position: absolute;
@@ -35,7 +35,6 @@
     .navbar {
       overflow: hidden;
       background-color: black;
-      position: fixed;
       top: 0;
       width: 100%;
     }
@@ -45,20 +44,49 @@
       color: #f2f2f2;
       text-align: center;
       padding: 14px 16px;
-      text-decoration: none;
-      font-family: 'Common Pixel', sans-serif;
       font-size: 17px;
     }
-    .navbar a:hover {
-      background-color: ghostwhite;
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+    .dropdown .dropbtn {
+      font-size: 16px;  
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      margin: 0;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+    .dropdown-content a {
+      float: none;
       color: black;
-      text-decoration: underline;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .navbar a:hover, .dropdown:hover .dropbtn {
+      background-color: darkgrey;
+      color: black;
     }
     .img1 {
       position: absolute;
       width:11vw;
       height:5vw;
-      top: 30vw;
+      top: 30vw;  
       right: 62vw;
     }
     .image {
@@ -72,23 +100,42 @@
     .img1:hover .image {
       opacity: 0.3;
     }
+    .img1 .tooltip {
+      visibility: hidden;
+      width: 10vh;
+      background-color: antiquewhite;
+      color: black;
+      text-align: center;
+      border-radius: 2vh; 
+      position: absolute;
+    }
+    .img1:hover .tooltip {
+      visibility: visible;
+    }
 
 </style>
 </head>
 
 <body>
+  <img src="bg.png" class="bg">
   <div class="navbar">
     <a href="https://zhonix05.github.io/ZhonixLab/">Home</a>
     <a href="#other">Other</a>
+    <div class="dropdown">
+      <a class="droptdn">Subject</a>
+      <div class="dropdown-content">
+        <a href="#">Chinese</a>
+        <a href="#">Biology</a>
+        <a href="#">Chemistry</a>
+        <a href="#">Physics</a>
+        <a href="#">Addmath</a>
+      </div>
+    </div>
   </div>
-
-  <br>
-  <br>
   <h1>Zhonix StudyRoom</h1>
-  <br>
-  <img src="bg.png" class="bg">
   <div class="img1">
   <a href="https://smpinhwa.edu.my/"><img src="peng.png" class="image"></a>
+  <span class="tooltip">Zex</span>
   </div>
 
 </body>
