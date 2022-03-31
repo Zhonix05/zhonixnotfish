@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>zhonix.lab</title>
+  <link rel = "icon" href = "ee.png"  type = "image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    @font-face {
+    font-family: 'Common Pixel';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Common Pixel'), url('https://fonts.cdnfonts.com/s/7553/COMMP___.woff') format('woff');
+    }
+    h1 {
+      font-size: 50px;
+      color: cornsilk;
+      text-align: center;
+    }
+    p {
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-size: 20px;
+    }
+    body {
+      background-image:url('gif.gif'); background-repeat:repeat;
+      background-attachment: scroll; 
+      background-size: cover;
+      font-family: 'Common Pixel', sans-serif;
+    }
+    .bg {
+      position: absolute;
+      width:50vw;
+      right: 55vh;
+      bottom: 10vh;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+    .navbar {
+      overflow: hidden;
+      background-color: black;
+      top: 0;
+      width: 100%;
+    }
+    .navbar a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      font-size: 17px;
+    }
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+    .dropdown .dropbtn {
+      font-size: 16px;  
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      margin: 0;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .navbar a:hover, .dropdown:hover .dropbtn {
+      text-decoration: none;
+      background-color: darkgrey;
+      color: black;
+    }
+    .peng {
+      position: absolute;
+      width:11vw;
+      height:5vw;
+      top: 30vw;  
+      right: 62vw;
+    }
+    .image {
+      opacity: 1;
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: .2s ease;
+      backface-visibility: hidden;
+    }
+    .peng:hover .image {
+      opacity: 0.3;
+    }
+    .peng .tooltip {
+      visibility: hidden;
+      width: 10vh;
+      background-color: royalblue;
+      color: black;
+      text-align: center;
+      border-radius: 2vh; 
+      position: absolute;
+    }
+    .peng:hover .tooltip {
+      visibility: visible;
+    }
+
+    .pic1 {
+      position: absolute;
+      width:3vw;
+      height:9vw;
+      top: 20%;
+      right: 1%;
+    }
+    .pic1:hover .image {
+      opacity: 0.3;
+    }
+    .pic1 .tooltip {
+      visibility: hidden;
+      width: 15vh;
+      background-color: antiquewhite;
+      color: black;
+      text-align: center;
+      border-radius: 1vh; 
+      position: absolute;
+      position: absolute;
+      top: 3%;
+      right: 5%;
+    }
+    .pic1:hover .tooltip {
+      visibility: visible;
+    }
+    .pic2 {
+      position: absolute;
+      width:3vw;
+      height:9vw;
+      top: 32%;
+      right: 1%;
+    }
+    .pic2:hover .image {
+      opacity: 0.3;
+    }
+    .pic2 .tooltip {
+      visibility: hidden;
+      width: 15vh;
+      background-color: aquamarine;
+      color: black;
+      text-align: center;
+      border-radius: 1vh; 
+      position: absolute;
+      position: absolute;
+      top: 3%;
+      right: 5%;
+    }
+    .pic2:hover .tooltip {
+      visibility: visible;
+    }
+    .pic3 {
+      position: absolute;
+      width:3vw;
+      height:9vw;
+      top: 44%;
+      right: 1%;
+    }
+    .pic3:hover .image {
+      opacity: 0.3;
+    }
+    .pic3 .tooltip {
+      visibility: hidden;
+      width: 20vh;
+      background-color: crimson;
+      color: black;
+      text-align: center;
+      border-radius: 1vh; 
+      position: absolute;
+      position: absolute;
+      top: 4%;
+      right: 5%;
+    }
+    .pic3:hover .tooltip {
+      visibility: visible;
+    }
+    .pic4 {
+      position: absolute;
+      width:3vw;
+      height:9vw;
+      top: 56%;
+      right: 1%;
+    }
+    .pic4:hover .image {
+      opacity: 0.3;
+    }
+    .pic4 .tooltip {
+      visibility: hidden;
+      width: 15vh;
+      background-color: coral;
+      color: black;
+      text-align: center;
+      border-radius: 1vh; 
+      position: absolute;
+      position: absolute;
+      top: 4%;
+      right: 5%;
+    }
+    .pic4:hover .tooltip {
+      visibility: visible;
+    }
+    .pic5 {
+      position: absolute;
+      width:3vw;
+      height:9vw;
+      top: 68%;
+      right: 1%;
+    }
+    .pic5:hover .image {
+      opacity: 0.3;
+    }
+    .pic5 .tooltip {
+      visibility: hidden;
+      width: 17vh;
+      background-color: deeppink;
+      color: black;
+      text-align: center;
+      border-radius: 1vh; 
+      position: absolute;
+      position: absolute;
+      top: 4%;
+      right: 5%;
+    }
+    .pic5:hover .tooltip {
+      visibility: visible;
+    }
+    .pic6 {
+      position: absolute;
+      width:3vw;
+      height:9vw;
+      top: 80%;
+      right: 1%;
+    }
+    .pic6:hover .image {
+      opacity: 0.3;
+    }
+
+</style>
+</head>
+
+<body>
+  <img src="bg.png" class="bg">
+  <div class="navbar">
+    <a href="https://zhonix05.github.io/ZhonixLab/">Home</a>
+    <a href="#timetable">TimeTable</a>
+    <div class="dropdown">
+      <a class="droptdn">Other</a>
+      <div class="dropdown-content">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+      </div>
+    </div>
+  </div>
+
+  <h1>Zhonix StudyRoom</h1>
+  <div class="peng">
+  <a href="https://smpinhwa.edu.my/"><img src="peng.png" class="image"></a>
+  <span class="tooltip">Zex</span>
+  </div>
+
+  <div class="pic1">
+    <a href="https://zhonix05.github.io/ZhonixLab/chinese"><img src="1.png" class="image"></a>
+    <span class="tooltip">Chinese</span>
+  </div>
+  <div class="pic2">
+    <a href="#"><img src="2.png" class="image"></a>
+    <span class="tooltip">Biology</span>
+  </div>
+  <div class="pic3">
+    <a href="#"><img src="3.png" class="image"></a>
+    <span class="tooltip">Chemistry</span>
+  </div>
+  <div class="pic4">
+    <a href="#"><img src="4.png" class="image"></a>
+    <span class="tooltip">Physics</span>
+  </div>
+  <div class="pic5">
+    <a href="#"><img src="5.png" class="image"></a>
+    <span class="tooltip">Addmath</span>
+  </div>
+  <div class="pic6">
+    <a href="#"><img src="6.png" class="image"></a>
+  </div>
+
+</body>
+</html>
