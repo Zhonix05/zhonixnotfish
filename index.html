@@ -94,7 +94,7 @@
       display: block;
       width: 100%;
       height: auto;
-      transition: .5s ease;
+      transition: .2s ease;
       backface-visibility: hidden;
     }
     .peng:hover .image {
@@ -103,7 +103,7 @@
     .peng .tooltip {
       visibility: hidden;
       width: 10vh;
-      background-color: antiquewhite;
+      background-color: royalblue;
       color: black;
       text-align: center;
       border-radius: 2vh; 
@@ -113,12 +113,139 @@
       visibility: visible;
     }
 
-    .pics {
+    .pic1 {
       position: absolute;
       width:3vw;
       height:9vw;
+      top: 20%;
+      right: 1%;
     }
-    .pics:hover .image {
+    .pic1:hover .image {
+      opacity: 0.3;
+    }
+    .pic1 .tooltip {
+      visibility: hidden;
+      width: 15vh;
+      background-color: antiquewhite;
+      color: black;
+      text-align: center;
+      border-radius: 1vh; 
+      position: absolute;
+      position: absolute;
+      top: 3%;
+      right: 5%;
+    }
+    .pic1:hover .tooltip {
+      visibility: visible;
+    }
+    .pic2 {
+      position: absolute;
+      width:3vw;
+      height:9vw;
+      top: 32%;
+      right: 1%;
+    }
+    .pic2:hover .image {
+      opacity: 0.3;
+    }
+    .pic2 .tooltip {
+      visibility: hidden;
+      width: 15vh;
+      background-color: aquamarine;
+      color: black;
+      text-align: center;
+      border-radius: 1vh; 
+      position: absolute;
+      position: absolute;
+      top: 3%;
+      right: 5%;
+    }
+    .pic2:hover .tooltip {
+      visibility: visible;
+    }
+    .pic3 {
+      position: absolute;
+      width:3vw;
+      height:9vw;
+      top: 44%;
+      right: 1%;
+    }
+    .pic3:hover .image {
+      opacity: 0.3;
+    }
+    .pic3 .tooltip {
+      visibility: hidden;
+      width: 20vh;
+      background-color: crimson;
+      color: black;
+      text-align: center;
+      border-radius: 1vh; 
+      position: absolute;
+      position: absolute;
+      top: 4%;
+      right: 5%;
+    }
+    .pic3:hover .tooltip {
+      visibility: visible;
+    }
+    .pic4 {
+      position: absolute;
+      width:3vw;
+      height:9vw;
+      top: 56%;
+      right: 1%;
+    }
+    .pic4:hover .image {
+      opacity: 0.3;
+    }
+    .pic4 .tooltip {
+      visibility: hidden;
+      width: 15vh;
+      background-color: coral;
+      color: black;
+      text-align: center;
+      border-radius: 1vh; 
+      position: absolute;
+      position: absolute;
+      top: 4%;
+      right: 5%;
+    }
+    .pic4:hover .tooltip {
+      visibility: visible;
+    }
+    .pic5 {
+      position: absolute;
+      width:3vw;
+      height:9vw;
+      top: 68%;
+      right: 1%;
+    }
+    .pic5:hover .image {
+      opacity: 0.3;
+    }
+    .pic5 .tooltip {
+      visibility: hidden;
+      width: 17vh;
+      background-color: deeppink;
+      color: black;
+      text-align: center;
+      border-radius: 1vh; 
+      position: absolute;
+      position: absolute;
+      top: 4%;
+      right: 5%;
+    }
+    .pic5:hover .tooltip {
+      visibility: visible;
+    }
+    .pic6 {
+      position: absolute;
+      width:3vw;
+      height:9vw;
+      top: 80%;
+      right: 1%;
+    }
+    .pic6:hover .image {
       opacity: 0.3;
     }
 
@@ -129,36 +256,47 @@
   <img src="bg.png" class="bg">
   <div class="navbar">
     <a href="https://zhonix05.github.io/ZhonixLab/">Home</a>
-    <a href="#other">Other</a>
+    <a href="#other">TimeTable</a>
     <div class="dropdown">
-      <a class="droptdn">Subject</a>
+      <a class="droptdn">Other</a>
       <div class="dropdown-content">
-        <a href="#">Chinese</a>
-        <a href="#">Biology</a>
-        <a href="#">Chemistry</a>
-        <a href="#">Physics</a>
-        <a href="#">Addmath</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
       </div>
     </div>
   </div>
+
   <h1>Zhonix StudyRoom</h1>
   <div class="peng">
   <a href="https://smpinhwa.edu.my/"><img src="peng.png" class="image"></a>
   <span class="tooltip">Zex</span>
   </div>
-  <div class="pics">
+
+  <div class="pic1">
     <a href="#"><img src="1.png" class="image"></a>
-    <br>
+    <span class="tooltip">Chinese</span>
+  </div>
+  <div class="pic2">
     <a href="#"><img src="2.png" class="image"></a>
-    <br>
+    <span class="tooltip">Biology</span>
+  </div>
+  <div class="pic3">
     <a href="#"><img src="3.png" class="image"></a>
-    <br>
+    <span class="tooltip">Chemistry</span>
+  </div>
+  <div class="pic4">
     <a href="#"><img src="4.png" class="image"></a>
-    <br>
+    <span class="tooltip">Physics</span>
+  </div>
+  <div class="pic5">
     <a href="#"><img src="5.png" class="image"></a>
-    <br>
+    <span class="tooltip">Addmath</span>
+  </div>
+  <div class="pic6">
     <a href="#"><img src="6.png" class="image"></a>
-    </div>
+  </div>
 
 </body>
 </html>
