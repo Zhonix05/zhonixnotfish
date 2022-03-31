@@ -31,6 +31,7 @@
       width:50vw;
       right: 55vh;
       bottom: 10vh;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     }
     .navbar {
       overflow: hidden;
@@ -72,17 +73,15 @@
       display: block;
       text-align: left;
     }
-    .dropdown-content a:hover {
-      background-color: #ddd;
-    }
     .dropdown:hover .dropdown-content {
       display: block;
     }
     .navbar a:hover, .dropdown:hover .dropbtn {
+      text-decoration: none;
       background-color: darkgrey;
       color: black;
     }
-    .img1 {
+    .peng {
       position: absolute;
       width:11vw;
       height:5vw;
@@ -97,10 +96,10 @@
       transition: .5s ease;
       backface-visibility: hidden;
     }
-    .img1:hover .image {
+    .peng:hover .image {
       opacity: 0.3;
     }
-    .img1 .tooltip {
+    .peng .tooltip {
       visibility: hidden;
       width: 10vh;
       background-color: antiquewhite;
@@ -109,8 +108,17 @@
       border-radius: 2vh; 
       position: absolute;
     }
-    .img1:hover .tooltip {
+    .peng:hover .tooltip {
       visibility: visible;
+    }
+
+    .pics {
+      position: absolute;
+      width:3vw;
+      height:9vw;
+    }
+    .pics:hover .image {
+      opacity: 0.3;
     }
 
 </style>
@@ -133,10 +141,23 @@
     </div>
   </div>
   <h1>Zhonix StudyRoom</h1>
-  <div class="img1">
+  <div class="peng">
   <a href="https://smpinhwa.edu.my/"><img src="peng.png" class="image"></a>
   <span class="tooltip">Zex</span>
   </div>
+  <div class="pics">
+    <a href="#"><img src="1.png" class="image"></a>
+    <br>
+    <a href="#"><img src="2.png" class="image"></a>
+    <br>
+    <a href="#"><img src="3.png" class="image"></a>
+    <br>
+    <a href="#"><img src="4.png" class="image"></a>
+    <br>
+    <a href="#"><img src="5.png" class="image"></a>
+    <br>
+    <a href="#"><img src="6.png" class="image"></a>
+    </div>
 
 </body>
 </html>
