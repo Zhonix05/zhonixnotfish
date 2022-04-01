@@ -31,13 +31,13 @@
 		font-size: 20px;
 		font-family: "LiGothic", "FangSong", Arial, serif;  
 	}
-	.navbar {
+	#navbar {
 		overflow: hidden;
 		background-color: black;
       	top: 0;
       	width: 100%;
     }
-    .navbar a {
+    #navbar a {
       	float: left;
 		display: block;
 		color: #f2f2f2;
@@ -45,25 +45,30 @@
       	padding: 14px 16px;
       	font-size: 17px;
     }
-    .dropdown {
+	#navbar a:hover, #dropdown:hover .dropbtn {
+      text-decoration: none;
+      background-color: darkgrey;
+      color: black;
+    }
+    #dropdown {
       	float: left;
       	overflow: hidden;
     }
-    .dropdown .dropbtn {
+    #dropdown .dropbtn {
 		font-size: 16px;  
 		color: white;
       	padding: 14px 16px;
       	background-color: inherit;
       	margin: 0;
     }
-    .dropdown-content {
+    #dropdown-content {
       	display: none;
       	position: absolute;
       	background-color: #f9f9f9;
      	min-width: 120px;
       	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     }
-    .dropdown-content a {
+    #dropdown-content a {
       	float: none;
       	color: black;
       	padding: 12px 16px;
@@ -71,14 +76,15 @@
       	display: block;
       	text-align: left;
     }
-    .dropdown:hover .dropdown-content {
+    #dropdown:hover .dropdown-content {
       	display: block;
-    }	
-    .navbar a:hover, .dropdown:hover .dropbtn {
-      	text-decoration: none;
-      	background-color: darkgrey;
-      	color: black;
     }
+	.sticky {
+  		position: fixed;
+  		top: 0;
+  		width: 100%;
+	}
+
 	#wenxue {
 		height: 100vh;
 		background-color: aquamarine;
@@ -96,36 +102,51 @@
 </head>
 
 <body>
-	<div class="navbar">
-		<a href="https://zhonix05.github.io/ZhonixLab/home">Home</a>
-		<a href="#timetable">TimeTable</a>
-		<div class="dropdown">
-			<a class="droptdn">Other</a>
-			<div class="dropdown-content">
-			<a href="#">1</a>
-			<a href="#">2</a>
-			<a href="#">3</a>
-			<a href="#">4</a>
+	<div id="navbar">
+		<a class="active" href="https://zhonix05.github.io/ZhonixLab/home/">Home</a>
+		<a href="#">TimeTable</a>
+		<div id="dropdown">
+			<a class="droptdn" href="javascript:void(0)">Other</a>
+			<div id="dropdown-content">
+			  <a href="#">1</a>
+			  <a href="#">2</a>
+			  <a href="#">3</a>
+			  <a href="#">4</a>
 			</div>
 		</div>
 	</div>
+
+	<script>
+		window.onscroll = function() {myFunction()};
+		
+		var navbar = document.getElementById("navbar");
+		var sticky = navbar.offsetTop;
+		
+		function myFunction() {
+		  if (window.pageYOffset >= sticky) {
+			navbar.classList.add("sticky")
+		  } else {
+			navbar.classList.remove("sticky");
+		  }
+		}
+		</script>
 
 	<h1>华文</h1>
 	<a href="#wenxue">文学常识</a>
 	<a href="#wenyan">文言文</a>
 	<a href="#yingyongwen">应用文</a>
 
-	<div class="main" id="wenxue">
+	<div id="wenxue">
 		<h2>文学常识</h2>
 		<p>梁实秋</p>
 	</div>
 
-	<div class="main" id="wenyan">
+	<div id="wenyan">
 		<h2>文言文</h2>
 		<p>夜雨寄北</p>
 	</div>
 
-	<div class="main" id="yingyongwen">
+	<div id="yingyongwen">
 		<h2>应用文</h2>
 		<p>通告 启事 公函</p>
 	</div>
