@@ -26,6 +26,7 @@
 	}
 	h2 {
 		font-family: "LiGothic", "FangSong", Arial, serif;  
+		text-align: center;
 	}
 	p {
 		font-size: 20px;
@@ -87,16 +88,32 @@
 
 	#wenxue {
 		height: 100vh;
-		background-color: aquamarine;
+		background-color: #f9f9f9;
+		opacity: 0.5;
+		font-size: 20px;
+	}
+	#wenxue:hover {
+		opacity: 1.0;
 	}
 	#wenyan {
 		height: 100vh;
-		background-color: cornflowerblue;
+		background-color: #f9f9f9;
+		opacity: 0.5;
+		font-size: 20px;
+	}
+	#wenyan:hover {
+		opacity: 1.0;
 	}
 	#yingyongwen {
 		height: 100vh;
-		background-color: darkgray;
+		background-color: aliceblue;
+		opacity: 0.5;
+		font-size: 20px;
 	}
+	#yingyongwen:hover {
+		opacity: 1.0;
+	}
+	#more {display: none;}
 
 	</style>
 </head>
@@ -132,14 +149,39 @@
 		</script>
 
 	<h1>华文</h1>
-	<a href="#wenxue">文学常识</a>
+	<a  href="#wenxue">文学常识</a>
 	<a href="#wenyan">文言文</a>
 	<a href="#yingyongwen">应用文</a>
 
 	<div id="wenxue">
 		<h2>文学常识</h2>
-		<p>梁实秋</p>
+		<p>《记梁任公先生的一次演讲》
+			<span id="dots">...</span><span id="more">
+				<br>&nbsp;作者：梁实秋，原名治华 #中国 #散文家 #翻译家
+				<br>《新月》月刊主编
+				<br> 《雅舍小品》《秋室杂文》
+				<br>&nbsp;梁任公
+		</span></p>
+		&nbsp;<button onclick="myFunction()" id="myBtn">Read more</button>
 	</div>
+
+	<script>
+		function myFunction() {
+		  var dots = document.getElementById("dots");
+		  var moreText = document.getElementById("more");
+		  var btnText = document.getElementById("myBtn");
+		
+		  if (dots.style.display === "none") {
+			dots.style.display = "inline";
+			btnText.innerHTML = "Read more"; 
+			moreText.style.display = "none";
+		  } else {
+			dots.style.display = "none";
+			btnText.innerHTML = "Read less"; 
+			moreText.style.display = "inline";
+		  }
+		}
+		</script>
 
 	<div id="wenyan">
 		<h2>文言文</h2>
