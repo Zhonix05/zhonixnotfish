@@ -82,7 +82,6 @@
         .content ul li:hover{
             cursor:pointer; 
             color: gold;
-            background-color: #131313;
             border-right: gold solid;
             border-left: gold solid;
         }
