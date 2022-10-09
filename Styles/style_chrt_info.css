@@ -1,101 +1,93 @@
 @font-face {
-            font-family: 'huxiao';
-            src: url(../Fonts/HuXiaoBoZhenShuaiTi-2.otf);
-        }
-        @font-face {
-            font-family: 'xiaowei';
-            src: url(../Fonts/ZCOOLXiaoWei-Regular.ttf);
-        }
+    font-family: 'huxiao';
+    src: url(../Fonts/HuXiaoBoZhenShuaiTi-2.otf);
+}
+@font-face {
+    font-family: 'xiaowei';
+    src: url(../Fonts/ZCOOLXiaoWei-Regular.ttf);
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            text-decoration: none;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
 
-        body {
-            background-color: #1C1C1C;
-        }
+body {
+    background-color: black;
+}
 
-        .sidebar{
-            font-family: 'huxiao';
-            width: 200px;
-            height: 100%;
-            background-color: #131313;
-            padding: 30px 0px;
-            position: fixed;
-        }
+.sidebar{
+    font-family: 'huxiao';
+    width: 200px;
+    height: 100%;
+    background-color: #131313;
+    padding: 30px 0px;
+    position: fixed;
+}
 
-        .sidebar h2{
-            color: gold;
-            text-transform: uppercase;
-            text-align: center;
-            font-size: 35px;
-            margin-bottom: 30px;
-        }
+.sidebar h2{
+    color: gold;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
 
-        .sidebar ul li{
-            color: #f3f5f9;
-            text-transform: uppercase;
-            text-align: center;
-            letter-spacing: 2px;
-            line-height: 20px;
-            font-size: 23.5px;
-            margin-bottom: 30px;
-        }
+.sidebar ul li{
+    color: #f3f5f9;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 20px;
+    font-size: 23.5px;
+    margin-bottom: 30px;
+}
 
-        .sidebar ul li:hover{
-            cursor:pointer; 
-            color: gold;
-            border-right: gold solid;
-        }
+.sidebar ul li:hover{
+    cursor:pointer; 
+    color: gold;
+    border-right: gold solid;
+}
 
-        a, a:hover, a:focus, a:active {
-            text-decoration: none;
-            color: inherit;
-        }
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
 
-        table {
-            border: 0px;
-            width: 84%;
-            margin-left: 15.9%;
-            
-        }
+table {
+    border: 0px;
+    width: 84%;
+    margin-left: 15.9%;
+}
 
-        td,tr {
-            border: 0px;
-            text-align: justify center;
-            letter-spacing: 10px;
-            font-size: 20px;
-            color: white;
-        }
+td,tr {
+    border: 0px;
+    text-align: justify center;
+    letter-spacing: 8px;
+    line-height: 30px;
+    font-size: 20px;
+    color: white;
+}
 
-        td,tr ul li{
-            color: #f3f5f9;
-            text-transform: uppercase;
-            text-align: center;
-            margin-bottom: 30px;
-            list-style-type:none;
-        }
+.content {
+    text-align: justify center;
+    font-family: 'huxiao';
+    font-size: 150px;
+    color: white;
+}
 
-        .content ul li:hover{
-            cursor:pointer; 
-            color: gold;
-            border-right: gold solid;
-            border-left: gold solid;
-        }
+.content h2{
+    font-size: 25px; 
+    letter-spacing: 8px;
+    text-align: center;
+    color: white;
+}
 
-        .content {
-            text-align: center  ;
-            font-family: 'huxiao';
-            font-size: 100px;
-            color: white;
-        }
-
-        .centered {
-            position: absolute;
-            top: 45%;
-            left: 60%;
-            transform: translate(-50%, -50%);
-        }
+.centered {
+    position: absolute;
+    top: 55%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
